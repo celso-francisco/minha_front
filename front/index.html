@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="card">
+            <h1>Dados para Entrega</h1>
+            <div class="card-body">
+                <!-- Cadastrar um novo cliente-->
+                <form><br>
+                    <!-- <fieldset class="fieldset">-->
+
+                    <div class="campo">
+                        <label for="nome"><strong>Nome: </strong></label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite o Nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="sobrenome"><strong>Sobrenome: </strong></label>
+                        <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite o sobrenome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone"><strong>Telefone</strong></label>
+                        <input type="Integer" name="telefone" id="telefone" placeholder="Somente número" required>
+                    </div>
+                    <div class="campo">
+                        <label for="cep"><strong>Cep</strong></label>
+                        <input type="Integer" name="cep" id="cep" placeholder="Somente número" required>
+                    </div>
+
+                    <div>
+                        <button id="btn-buscar">Consultar CEP</button>
+                    </div><br>
+
+                    <div class="campo">
+                        <label for="logradouro"><strong>Logradouro:</strong></label>
+                        <input type="text" name="logradouro" id="logradouro" placeholder="Preenchimento automático"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="complemento"><strong>Complemento</strong></label>
+                        <input type="text" name="complemento" id="complemento" placeholder="Casa / Apto / bloco"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="bairro"><strong>Bairro</strong></label>
+                        <input type="text" name="bairro" id="bairro" placeholder="Preenchimento automático" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cidade"><strong>Cidade</strong></label>
+                        <input type="text" name="cidade" id="cidade" placeholder="Preenchimento automático" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="estado"><strong>Estado</strong></label>
+                        <input type="text" name="estado" id="estado" placeholder="Preenchimento automático" required>
+                    </div>
+
+                    <div>
+                        <button onclick="newItem()" class="addBtn">Adicionar</button>
+                    </div>
+                    <!--</fieldset>-->
+
+                </form><br>
+            </div>
+
+        </div>
+
+        <div class="tab_clientes">
+
+            <!-- Tabela com clientes existentes -->
+            <section class="items">
+                <table id="myTable">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Telefone</th>
+                        <th>Cep</th>
+                        <th>Logradouro</th>
+                        <th>Complemento</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px">
+                        </th>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- Rascunho-->
+
+<!-- Cabeçalho com titulo do site -->
+<!--<header>
+                <div>
+                    <h1>Cadastro de Clientes</h1>
+                    <p id="subtitulo">Primeiro contato com o Cliente</p>
+                </div>
+
+            </header>-->

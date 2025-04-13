@@ -1,0 +1,28 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: front-cliente
+    container_name: front-cliente
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - cliente-rede
+
+  backend:
+    build:
+      context: ../api
+      dockerfile: Dockerfile
+    image: back-cliente
+    container_name: back-cliente
+    ports:
+      - "5000:5000"
+    networks:
+      - cliente-rede
+
+networks:
+  cliente-rede:
+    driver: bridge
